@@ -1,15 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using MiNET;
 using MiNET.Plugins;
 using MiNET.Plugins.Attributes;
-using MiNET.Plugins.Commands;
-using MiNET.Items;
-using MiNET.Blocks;
-using MiNET.Utils;
 
 namespace ItemInfo
 {
