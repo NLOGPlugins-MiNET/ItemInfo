@@ -28,14 +28,14 @@ namespace ItemInfo
             player.SendMessage($"§9ItemInfo > §fItem Count: §7{count}");
         }
         [Command(Name = "iv", Description = "Show Item Info")]
-        public void Execute(Player sender, string username)
+        public void Execute(Player player, string username)
         {
-            Player player = null;
+            Player target = null;
             foreach (var i in Context.LevelManager.Levels)
             {
-                player = i.Players.ToList().Find(x => x.Value.Username.ToLower().Contains(username)).Value ?? null; break;
+                target = i.Players.ToList().Find(x => x.Value.Username.ToLower().Contains(username)).Value ?? null; break;
             }
-            var handit = player.Inventory.GetItemInHand();
+            var handit = target.Inventory.GetItemInHand();
             var id = handit.Id;
             var name = handit.GetType().Name;
             var count = handit.Count;
